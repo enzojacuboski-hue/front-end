@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campo Minado HTML e CSS Fácil (50 Blocos)</title>
+    <title>Campo Minado HTML e CSS Fácil (25 Blocos)</title>
     <style>
         :root {
             --grid-gap: 12px;
@@ -44,8 +44,8 @@
         .grid-container {
             display: grid;
             width: 100%;
-            max-width: 1200px;
-            grid-template-columns: repeat(10, 1fr);
+            max-width: 600px;
+            grid-template-columns: repeat(5, 1fr); /* 5 colunas para fechar a grade 5x5 = 25 */
             gap: var(--grid-gap);
             perspective: 1000px;
         }
@@ -119,21 +119,18 @@
 </head>
 <body>
 
-<h1>🎮 Campo Minado: HTML & CSS (Nível Fácil) 🚀</h1>
+<h1>🎮 Campo Minado: HTML & CSS (25 Blocos) 🚀</h1>
 <div class="grid-container" id="minefield"></div>
 
 <script>
     const minefield = document.getElementById('minefield');
     
-    // 25 Itens de HTML Super Fáceis
+    // 13 Itens de HTML
     const htmlItems = [
         { type: 'html', name: '<html>', answer: 'Raiz do documento HTML.' },
         { type: 'html', name: '<head>', answer: 'Contém os metadados e título da aba.' },
         { type: 'html', name: '<body>', answer: 'Corpo da página (conteúdo visível).' },
-        { type: 'html', name: '<title>', answer: 'Define o título da aba do navegador.' },
         { type: 'html', name: '<h1>', answer: 'Título principal da página.' },
-        { type: 'html', name: '<h2>', answer: 'Subtítulo ou título secundário.' },
-        { type: 'html', name: '<h3>', answer: 'Título de nível 3.' },
         { type: 'html', name: '<p>', answer: 'Define um parágrafo de texto.' },
         { type: 'html', name: '<a>', answer: 'Cria um link (hiperlink).' },
         { type: 'html', name: '<img>', answer: 'Insere uma imagem na página.' },
@@ -142,27 +139,15 @@
         { type: 'html', name: '<button>', answer: 'Cria um botão clicável.' },
         { type: 'html', name: '<input>', answer: 'Campo para o usuário digitar dados.' },
         { type: 'html', name: '<ul>', answer: 'Lista com bolinhas (não ordenada).' },
-        { type: 'html', name: '<ol>', answer: 'Lista numerada (ordenada).' },
-        { type: 'html', name: '<li>', answer: 'Item de uma lista.' },
-        { type: 'html', name: '<br>', answer: 'Pula uma linha (quebra de linha).' },
-        { type: 'html', name: '<hr>', answer: 'Cria uma linha horizontal divisória.' },
-        { type: 'html', name: '<strong>', answer: 'Deixa o texto em negrito.' },
-        { type: 'html', name: '<em>', answer: 'Deixa o texto em itálico.' },
-        { type: 'html', name: '<form>', answer: 'Contêiner para formulários.' },
-        { type: 'html', name: '<style>', answer: 'Tag para colocar códigos CSS.' },
-        { type: 'html', name: '<script>', answer: 'Tag para colocar códigos JavaScript.' },
-        { type: 'html', name: '<header>', answer: 'Define o topo/cabeçalho da página.' }
+        { type: 'html', name: '<li>', answer: 'Item de uma lista.' }
     ];
 
-    // 25 Itens de CSS Super Fáceis
+    // 12 Itens de CSS
     const cssItems = [
         { type: 'css', name: 'color', answer: 'Muda a cor do texto.' },
         { type: 'css', name: 'background-color', answer: 'Muda a cor de fundo.' },
         { type: 'css', name: 'font-size', answer: 'Muda o tamanho da letra.' },
-        { type: 'css', name: 'font-family', answer: 'Muda o tipo de fonte/letra.' },
-        { type: 'css', name: 'font-weight', answer: 'Ajusta o negrito da letra (ex: bold).' },
         { type: 'css', name: 'text-align', answer: 'Alinha o texto (left, center, right).' },
-        { type: 'css', name: 'text-decoration', answer: 'Coloca ou tira o sublinhado do texto.' },
         { type: 'css', name: 'width', answer: 'Define a largura de um elemento.' },
         { type: 'css', name: 'height', answer: 'Define a altura de um elemento.' },
         { type: 'css', name: 'margin', answer: 'Espaço do lado de fora do elemento.' },
@@ -170,20 +155,10 @@
         { type: 'css', name: 'border', answer: 'Cria uma borda ao redor do elemento.' },
         { type: 'css', name: 'border-radius', answer: 'Arredonda os cantos das bordas.' },
         { type: 'css', name: 'display: flex', answer: 'Ativa o modo Flexbox para alinhar itens.' },
-        { type: 'css', name: 'gap', answer: 'Cria espaçamento entre itens do flex/grid.' },
-        { type: 'css', name: 'opacity', answer: 'Muda a transparência (de 0 a 1).' },
-        { type: 'css', name: 'cursor: pointer', answer: 'Deixa a seta do mouse com formato de mãozinha.' },
-        { type: 'css', name: 'background-image', answer: 'Coloca uma foto como fundo.' },
-        { type: 'css', name: 'list-style', answer: 'Tira ou muda as bolinhas da lista.' },
-        { type: 'css', name: 'box-shadow', answer: 'Adiciona sombra ao redor de uma caixa.' },
-        { type: 'css', name: 'text-shadow', answer: 'Adiciona sombra nas letras do texto.' },
-        { type: 'css', name: 'max-width', answer: 'Define a largura máxima de uma caixa.' },
-        { type: 'css', name: 'border-color', answer: 'Muda apenas a cor da borda.' },
-        { type: 'css', name: 'visibility', answer: 'Esconde ou mostra um elemento.' },
-        { type: 'css', name: 'margin-top', answer: 'Adiciona espaçamento externo apenas no topo.' }
+        { type: 'css', name: 'gap', answer: 'Cria espaçamento entre itens do flex/grid.' }
     ];
 
-    // Junta as duas categorias mantendo exatamente 50 blocos
+    // Totaliza exatamente 25 blocos
     const items = [...htmlItems, ...cssItems];
 
     function shuffle(array) {
